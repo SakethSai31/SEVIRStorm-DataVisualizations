@@ -24,8 +24,10 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0'
         with:
-          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}' 
 
       - name: Deploy
         run: |-
-               gsutil -m rsync -R output gs://$GCS_BUCKET
+               gsutil -m rsync -R output gs://sample3196/
+               echo: "gsutil du -s -a gs://sample3196/"
+        
