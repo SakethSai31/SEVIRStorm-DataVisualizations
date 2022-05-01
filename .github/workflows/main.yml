@@ -28,6 +28,5 @@ jobs:
 
       - name: Deploy
         run: |-
-               gsutil -m rsync -R output gs://sample3196/
                echo: "gsutil du -s -a gs://sample3196/"
         
